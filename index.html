@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM</title>
+    <style>
+          #withdrawal_form{
+            background-color: rgb(148, 148, 229);
+            height: 500px;
+            width: 410px;
+            border-top-right-radius: 20px;
+            border-top-left-radius: 20px;
+            
+        }
+        #cash_form{
+            text-align: center;
+            padding-top: 20px;
+        }
+        #para1{
+            font-size: 22px;
+            padding-top: 30px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-transform: uppercase;
+            color: whitesmoke;
+            font-weight: bold;
+            text-align: center;
+            
+        }
+        #para2{
+            color: darkblue;
+            font-size: 14px;
+            text-transform: lowercase;
+        }
+        #color{
+            background-color: violet;
+            height: 100px;
+            border-radius: 20px;
+        }
+        #bala{
+            color: darkblue;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-weight: bold;
+        }
+        #ba{
+            color: darkblue;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-weight: bold;
+        }
+        input[type="number"]{
+            height: 40px;
+            font-size: 30px;
+            
+        }
+        #send{
+            background-color: rgb(147, 231, 189);
+            width: 80px;
+            height: 30px;
+            font-size: medium;
+            font-weight: bold;
+            color: darkblue;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+       
+    </style>
+</head>
+<body>
+    <div id="withdrawal_form">
+    
+        <div id="color">
+        <p id="para1">
+            Cash Withdrawal Point:
+        <span id="para2">(Transactions above 50000, is not adviceable)</span>
+        </p>
+        </div>
+        
+             <div id ="cash_form">
+            <p>
+                <p id="bala">Available Balance:</p>
+             <input type="number" readonly value="50000" id="balance">
+            </p>
+            <p>
+                <p id="ba">Withdrawal Amount:</p>
+                <input type="number" id="withdraw"><span style="color:red" id="error"></span>
+            </p>
+            <button id="send" onclick="Withdrawal()">Send</button>
+            </div>
+        </div>
+        <script src="js/ATM.js"></script>
+</body>
+</html>
